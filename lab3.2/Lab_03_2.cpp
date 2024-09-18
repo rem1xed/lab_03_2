@@ -1,0 +1,48 @@
+// Lab_03_2.cpp
+// ????? ???????
+// ??????????? ?????? ? 3.2
+// ????????????, ?????? ????????: ??????? ? ???????????.
+// ??????? 17
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	double a;
+	double b;
+	double c;
+	double x;
+	double F;
+
+	cout << "a ="; cin >> a;
+	cout << "\nb ="; cin >> b;
+	cout << "\nc ="; cin >> c;
+	cout << "\nx ="; cin >> x;
+	
+	if (x + 10 < 0 && b != 0)
+		F = a * pow(x, 2) - c * x + b;
+	if (x + 10 > 0 && b == 0)
+		F = (x - a) / (x - c);
+	if(!((x + 10 < 0) && ( b != 0)) && !((x + 10 > 0) && (b == 0)))
+		F = (x * -1) / (a - c);
+
+	cout << "\n\n1)F = " << F;
+
+	if(x + 10 < 0 && b !=0)
+		F = a * pow(x, 2) - c * x + b;
+	else
+		if(x + 10 > 0 && b == 0)
+			F = (x - a) / (x - c);
+		else
+			F = (x * -1) / (a - c);
+
+
+	cout << "\n\n2)F = " << F;
+
+
+	cin.get();
+	return 0;
+}
